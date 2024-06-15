@@ -1,1 +1,1 @@
-# npdm-react-example
+# npdmjs-react-example
