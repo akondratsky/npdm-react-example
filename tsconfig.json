@@ -1,20 +1,14 @@
 {
   "compilerOptions": {
-    "target": "ES2020",
-    "lib": ["DOM", "ES2020"],
-    "module": "ESNext",
-    "outDir": "npdm",
-    "jsx": "react-jsx",
     "strict": true,
-    "skipLibCheck": true,
-    "isolatedModules": true,
-    "resolveJsonModule": true,
-    "moduleResolution": "bundler",
-    "useDefineForClassFields": true
+    "outDir": "npdm"
   },
   "references": [
-    { "path": "./tsconfig.lib.json" },
+    { "path": "./tsconfig.modules.json" },
+    { "path": "./tsconfig.spec.esm.json" },
+    // { "path": "./tsconfig.spec.cjs.json" },
     { "path": "./tsconfig.test.json" },
     { "path": "./tsconfig.scripts.json" }
-  ]
+  ],
+  "include": []
 }

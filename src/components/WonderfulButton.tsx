@@ -1,5 +1,5 @@
 import styled from '@emotion/styled';
-import { FC } from 'react';
+import type { WonderfulButtonType } from '../spec';
 
 const GlowingButton = styled.button`
   width: 250px;
@@ -44,13 +44,6 @@ const GlowingButton = styled.button`
     100% { background-position: 0 0; }
   }
 `;
-
-export type WonderfulButtonProps = {
-  label: string;
-  onClick?: () => void;
-};
-
-export type WonderfulButtonType = FC<WonderfulButtonProps>;
 
 const WonderfulButton: WonderfulButtonType = ({ label, onClick }) => {
   return (

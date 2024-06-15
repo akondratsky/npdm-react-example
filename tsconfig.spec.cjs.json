@@ -1,0 +1,16 @@
+{
+  "extends": "./tsconfig.json",
+  "compilerOptions": {
+    "composite": true,
+    "rootDir": "src/spec",
+    "baseUrl": "src/spec",
+    "skipLibCheck": true,
+
+    "module": "CommonJS",
+    "target": "ES2015",
+    "outDir": "npdm/spec/cjs",
+  },
+  "include": [
+    "src/spec/*"
+  ]
+}

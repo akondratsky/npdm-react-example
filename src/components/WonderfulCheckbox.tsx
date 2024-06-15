@@ -1,5 +1,6 @@
 import styled from '@emotion/styled';
-import { FC, useState } from 'react';
+import { useState } from 'react';
+import { WonderfulCheckboxType } from '../spec';
 
 const Container = styled.div`
   display: flex;
@@ -43,14 +44,6 @@ const CheckboxBase = styled.input`
     transform: translate(-50%, -50%) scale(1);
   }
 `;
-
-
-export type CheckboxProps = {
-  onChange?: (isChecked: boolean) => void;
-  label: string;
-};
-
-export type WonderfulCheckboxType = FC<CheckboxProps>;
 
 
 const WonderfulCheckbox: WonderfulCheckboxType = ({ label, onChange }) => {

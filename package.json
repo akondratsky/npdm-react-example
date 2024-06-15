@@ -6,8 +6,8 @@
     "type": "git",
     "url": "https://github.com/akondratsky/npdm-react-example.git"
   },
-  "main": "dist/cjs/index.js",
-  "module": "dist/mjs/index.js",
+  "main": "npdm/spec/cjs/index.js",
+  "module": "npdm/spec/mjs/index.js",
   "devDependencies": {
     "@commitlint/cli": "19.2.1",
     "@commitlint/config-conventional": "19.1.0",
@@ -38,8 +38,8 @@
   },
   "exports": {
     ".": {
-      "import": "./dist/mjs/index.js",
-      "require": "./dist/cjs/index.js"
+      "import": "./npdm/spec/mjs/index.js",
+      "require": "./npdm/spec/cjs/index.js"
     }
   },
   "bugs": {
@@ -53,15 +53,21 @@
   "scripts": {
     "test": "vitest run",
     "lint": "bun run lint:tsc && eslint src",
-    "lint:tsc": "tsc --project tsconfig.test.json --noEmit && tsc --project tsconfig.lib.json --noEmit",
+    "lint:tsc": "bun run lint:tsc:tests && bun run lint:tsc:modules && bun run lint:tsc:spec",
+    "lint:tsc:tests": "tsc --project tsconfig.test.json --noEmit",
+    "lint:tsc:modules": "tsc --project tsconfig.modules.json --noEmit",
+    "lint:tsc:spec": "tsc --project tsconfig.spec.esm.json --noEmit",
     "dev": "rsbuild dev --open",
-    "build": "rsbuild build",
-    "types": "tsc",
+    "build": "bun run build:modules && bun run build:types",
+    "build:modules": "rsbuild build",
+    "build:types": "bun run build:types:esm && bun run build:types:cjs",
+    "build:types:esm": "tsc --project tsconfig.spec.esm.json",
+    "build:types:cjs": "tsc --project tsconfig.spec.cjs.json",
     "preview": "rsbuild preview",
     "prepare": "husky"
   },
   "type": "module",
-  "types": "dist/cjs/index.d.ts",
+  "types": "npdm/spec/cjs/index.d.ts",
   "dependencies": {
     "@emotion/react": "^11.11.4",
     "@emotion/styled": "^11.11.5",

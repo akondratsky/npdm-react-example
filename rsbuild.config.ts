@@ -8,7 +8,6 @@ export default defineConfig({
     distPath: {
       root: 'npdm',
     },
-
     assetPrefix: 'auto',
     cleanDistPath: true,
     filename: {
@@ -20,20 +19,20 @@ export default defineConfig({
       svg: '[name].[ext]',
     },
   },
+
   server: {
     port: 3000,
   },
+
   dev: {
     assetPrefix: 'auto',
   },
+
   tools: {
     rspack: (config, { appendPlugins }) => {
       if (config.output) {
         config.output.uniqueName = 'npdmjs-react-example';
       }
-
-      (config.entry as Record<string, string[]>).spec = ['./src/spec.ts'];
-
       appendPlugins([
         new ModuleFederationPlugin({
           name: 'npdmjs_react_example',
@@ -55,5 +54,6 @@ export default defineConfig({
       ]);
     },
   },
+
   plugins: [pluginReact()],
 });
