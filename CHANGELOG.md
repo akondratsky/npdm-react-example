@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.1.1](https://github.com/akondratsky/npdm-react-example/compare/v2.1.0...v2.1.1) (2024-06-16)
+
+
+### Bug Fixes
+
+* make @npdm/module-federation peer dependency ([ccf5c79](https://github.com/akondratsky/npdm-react-example/commit/ccf5c79edff459a6ab748db139fd6e3f54d7939d))
+
 ## [2.1.0](https://github.com/akondratsky/npdm-react-example/compare/v2.0.0...v2.1.0) (2024-06-16)
 
 
