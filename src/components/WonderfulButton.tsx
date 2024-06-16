@@ -12,6 +12,11 @@ const GlowingButton = styled.button`
   position: relative;
   z-index: 0;
   border-radius: 10px;
+  text-shadow: 0 0 5px rgba(255, 255, 255, 0.5),
+                 0 0 10px rgba(255, 255, 255, 0.5),
+                 0 0 15px rgba(255, 255, 255, 0.5),
+                 0 0 20px rgba(255, 255, 255, 0.5),
+                 0 0 25px rgba(255, 255, 255, 0.5);
 
   &:before {
     content: '';
