@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.1.0](https://github.com/akondratsky/npdm-react-example/compare/v2.0.0...v2.1.0) (2024-06-16)
+
+
+### Features
+
+* add glowing labels for the WonderfulButton and WonderfulCheckbox components ([7ccd539](https://github.com/akondratsky/npdm-react-example/commit/7ccd539b0070306d525c4f21a9fffda17984e1bb))
+
 ## [2.0.0](https://github.com/akondratsky/npdm-react-example/compare/v1.0.0...v2.0.0) (2024-06-16)
 
 
