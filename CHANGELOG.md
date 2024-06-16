@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.2.0](https://github.com/akondratsky/npdm-react-example/compare/v2.1.1...v2.2.0) (2024-06-16)
+
+
+### Features
+
+* change labels color to green ([2746ae2](https://github.com/akondratsky/npdm-react-example/commit/2746ae2a11bb12909e0202769f8f52c96dc247d5))
+
 ## [2.1.1](https://github.com/akondratsky/npdm-react-example/compare/v2.1.0...v2.1.1) (2024-06-16)
 
 
