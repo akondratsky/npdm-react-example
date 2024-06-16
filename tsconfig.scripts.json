@@ -4,11 +4,13 @@
     "composite": true,
     "module": "NodeNext",
     "moduleResolution": "NodeNext",
-    "rootDir": "."
+    "rootDir": ".",
+    "resolveJsonModule": true
   },
   "include": [
     "rsbuild.config.ts",
     "vitest-setup.ts",
-    "vitest.config.ts"
+    "vitest.config.ts",
+    "package.json"
   ]
 }

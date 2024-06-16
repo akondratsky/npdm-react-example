@@ -9,7 +9,10 @@ export type WonderfulButtonProps = {
 
 export type WonderfulButtonType = FC<WonderfulButtonProps>;
 
-export const wonderfulButtonModule: DynamicModule<WonderfulButtonType> = {
+/**
+ * Module exports one default component, WonderfulButton
+ */
+export const wonderfulButtonModule: DynamicModule<{ default: WonderfulButtonType }> = {
   exposedPath: '/Button',
   packageSpec,
 };

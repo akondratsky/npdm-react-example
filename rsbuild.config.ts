@@ -1,7 +1,8 @@
 import { defineConfig } from '@rsbuild/core';
 import { pluginReact } from '@rsbuild/plugin-react';
 import { ModuleFederationPlugin } from '@module-federation/enhanced/rspack';
-
+import { getRemoteName } from '@npdm/module-federation';
+import { name, version } from './package.json';
 
 export default defineConfig({
   output: {
@@ -35,12 +36,25 @@ export default defineConfig({
       }
       appendPlugins([
         new ModuleFederationPlugin({
-          name: 'npdmjs_react_example',
+          name: getRemoteName(name, version),
           exposes: {
             './Button': './src/components/WonderfulButton.tsx',
             './Checkbox': './src/components/WonderfulCheckbox.tsx',
           },
-          shared: ['react', 'react-dom'],
+          shared: {
+            'react': {
+              singleton: true,
+            },
+            'react-dom': {
+              singleton: true,
+            },
+            '@emotion/react': {
+              singleton: true,
+            },
+            '@emotion/styled': {
+              singleton: true,
+            },
+          },
           manifest: false,
           filename: 'entry.js',
           dts: {
