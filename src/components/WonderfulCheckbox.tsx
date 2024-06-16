@@ -10,7 +10,7 @@ const Container = styled.div`
 const Label = styled.label`
   margin-left: 10px;
   cursor: pointer;
-  color: #fff;
+  color: #00ff00;
   text-shadow: 0 0 5px rgba(255, 255, 255, 0.5),
                  0 0 10px rgba(255, 255, 255, 0.5),
                  0 0 15px rgba(255, 255, 255, 0.5),

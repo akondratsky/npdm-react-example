@@ -6,7 +6,7 @@ const GlowingButton = styled.button`
   height: 50px;
   border: none;
   outline: none;
-  color: #fff;
+  color: #00ff00;
   background: #111;
   cursor: pointer;
   position: relative;
