@@ -34,7 +34,10 @@
   },
   "peerDependencies": {
     "react": "^18",
-    "react-dom": "^18"
+    "react-dom": "^18",
+    "@emotion/react": "^11.11.4",
+    "@emotion/styled": "^11.11.5",
+    "@npdm/module-federation": "^2.1.0"
   },
   "exports": {
     ".": {
@@ -67,10 +70,5 @@
     "prepare": "husky"
   },
   "type": "module",
-  "types": "npdm/spec/cjs/index.d.ts",
-  "dependencies": {
-    "@emotion/react": "^11.11.4",
-    "@emotion/styled": "^11.11.5",
-    "@npdm/module-federation": "2.0.0"
-  }
+  "types": "npdm/spec/cjs/index.d.ts"
 }
